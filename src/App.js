@@ -1,13 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import {useEffect, } from "react"
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    console.log({navigator})
+    console.log({window})
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          gh-pages
+    <div className="App" >
+      <header className="App-header" >
+        <p >
+          {`platform: ${navigator.platform}`}
+        </p >
+        <p >
+          {`userAgent: ${navigator.userAgent}`}
+        </p >
+        <p >
+          {`vendor: ${navigator.vendor}`}
+        </p >
+        <p >
+          {`opera: ${window.opera}`}
         </p>
         <a
           className="App-link"
@@ -16,10 +29,10 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
-    </div>
-  );
+        </a >
+      </header >
+    </div >
+  )
 }
 
-export default App;
+export default App
